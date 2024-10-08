@@ -1,0 +1,31 @@
+[project]
+name = "powertools-quickstart"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "nickwkt", email = "nickb55245@gmail.com"},
+]
+dependencies = [
+    "aws-lambda-powertools[tracer]==3.1.0",
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+_.env_file = ".env"
+format = "ruff format"
+lint = "ruff check --fix"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ruff==0.6.9",
+]
+[tool.pyright]
+include = ["hello_world"]
+venvPath = "."
+venv = ".venv"
