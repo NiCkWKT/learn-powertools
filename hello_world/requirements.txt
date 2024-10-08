@@ -1,2 +1,1 @@
-aws-lambda-powertools
-aws-xray-sdk
+aws-lambda-powertools[tracer]

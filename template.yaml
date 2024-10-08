@@ -4,6 +4,8 @@ Description: Sample SAM Template for powertools-quickstart
 Globals:
   Function:
     Timeout: 3
+  Api:
+    TracingEnabled: true
 Resources:
   HelloWorldFunction:
     Type: AWS::Serverless::Function
@@ -11,6 +13,7 @@ Resources:
       CodeUri: hello_world/
       Handler: app.lambda_handler
       Runtime: python3.9
+      Tracing: Active
       Events:
         HelloWorld:
           Type: Api
